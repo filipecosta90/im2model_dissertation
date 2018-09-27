@@ -186,18 +186,18 @@ outlined analysis chain.
 	
 	The possibility of creating an atomic model from a single high-resolution TEM image would increase the information presented to electron microscopy users and would support the automation of tasks and information retrieval(currently retrieved manually).\par 
 	
-	The software tool to be developed, named Im2Model, is therefore presented as a bridge between data visualisation of nanostructured materials crystallographic information and quantitative interpretation in a real-time basis of experimental attained high-resolution TEM images.
+	The software tool to be developed, named Im2Model, is therefore presented as a bridge between data visualisation of nano-structured materials crystallographic information and quantitative interpretation in a real-time basis of experimental attained high-resolution TEM images.
 	
 
 
 
-	\section{Pre-Dissertation Structure}
+	\section{Dissertation Structure}
 		
 
-This pre-dissertation has 6 chapters, each with their summary presented bellow:
+This dissertation has 6 chapters, each with their summary presented bellow:
 
 \begin{itemize}
-    \item \textbf{Introduction}: Presenting the motivation for this dissertation, and illustrating the desired sample input and ouput of Im2Model.
+    \item \textbf{Introduction}: Presenting the motivation for this dissertation, and illustrating the desired sample input and output of Im2Model.
     
      \item \textbf{Atomic Models for TEM Image Simulation and Matching}:
     Presenting the state-of-the-art regarding the  crystallographic indexing of nanostructured materials,  methodologies for TEM image simulation, and image correlation algorithms.
@@ -372,9 +372,27 @@ A performance goal provides direction for our performance analysis work and will
 help the optimisation pipeline. Our main objective is to provide a time-efficient and
 unbiased work-flow for the quantitative interpretation of high-resolution TEM images, by the use of
 efficient computation methods, enhancing the productivity on materials characterisation at the atomic
-scale.
+scale. Considering that the work-flow presents such a demanding and wide-ranging requirements, a single approach can no longer meet all of its computing, data processing and storage needs. 
+Instead, the work is broken down into smaller tasks that can be performed efficiently, and those different tools are stitched together using an distributed system design approach.\\
+
+The composite distributed system must provide certain guarantees:
+
+\begin{enumerate}
+				    \item Reliabitity
+		    \item Scalability
+		    \item Maitainability
+		\end{enumerate}
+
+
 The resource utilisation efficiency for a given application workload
 can be considered as the secondary objective.\par 
+
+
+
+
+
+\section{Describing Performance} %% Target Optimization Metrics
+
 This chapter will refer to some commonly used techniques by which application performance
 can be improved: selecting an I/O size, caching, buffering, concurrency
 and parallelism, non-blocking I/O, and processor binding. Some of them are strictly related to the target platforms and to the target operating systems. \par 
@@ -538,58 +556,12 @@ Techniques to load balance work across all the cores available should be conside
 
 
 
-	% CHAPTER - Contribution -------------------------
-	\chapter{Planned dissertation work}
 	
-	
-	
-Following the state of the art presented in chapter \ref{chapter:im2model_workflow}, this dissertation aims to apply the concepts presented and proven in the previous sections regarding the construction of atomic structures based on high resolution TEM images interpretation, and simulation of optical parameters correlating with the experimentally acquired image.
-
-		\section{Software requirements}
-
-The Im2Model application should be structure trough the following steps:
-
-\begin{itemize}
-    \item \textbf{T-focus Map} -- Validation of the experimental setup parameters informed by the
-user and the preliminary crystallographic analysis by Im2Cr \citep{asilva2016} of TEM images  through image simulations of a small segment and its
-comparison with the experimental image, with the optical parameters varied stepwise in such a way that the image with the best fit to the experimental image will estimate the local sample thickness and defocus.\par This procedure is often referred as thickness-defocus maps in
-TEM simulation, and 
-will be carried out using Dr. Probe \citep{drprobe} %%pf verificar referencia
-		command-line software tools, composed of three tools, each related to one of the three Dr. Probe simulation steps. Wrappers for the target operating systems will be created.\par  The best fit to the experimental image will be carried out by recurring to the free Open Source Computer Vision Library (OpenCV), with two step image correlation algorithms and their respective suitable error metric, the first being a patch-based translation alignment with the similarity metric being the normalized correlation coefficient, and the second being an more sophisticated euclidean parametric motion with the same similarity metric as the first correlation step.
-		
-		
-\item  \textbf{Supercell estimation} --  A super cell model representing the whole structure will be built based on the crystallographic structure
-retrieved by Im2Cr \citep{asilva2016} and the estimated dimensions of a certain region of interest. At a first step an outline of the X-Y crystal shape will be produced based on the ROI. A rough estimation of the 3D nanostructure will be achieved after this workflow step.\par 
-
-
-
-
-\item \textbf{Supercell refinement} -- Iterative steps of image
-simulation, images comparison and model refinement will be carried out until a convergence threshold. Input parameters will also be refined and validated.\par  
-\end{itemize}
-
-
-
-During these steps, the atomic model and the TEM experimental parameters will be refined, leading to a
-complete description of the sample structure. We should have an atom by atom description of the nanostructure.\par 
-
-	
-\section{Efficient implementation of Im2Model workflow}
-		    
-		    Im2Model main objective is to provide a time-efficient and
-unbiased work-flow for the quantitative interpretation of high-resolution TEM images, by the use of
-efficient computation methods, enhancing the productivity on materials characterisation at the atomic
-scale.
-The resource utilisation efficiency for a given application workload
-can be considered as the secondary objective.\par 
-	
-	In order assess Im2Model efficiency on the prior metris  a theoretical performance model should be developed. Based on it we could impose theoretical performance roofs, explain experimental results and provide direction for the next software improvement step.
-	
-
 	% CHAPTER - Application -------------------------
-	\chapter{Preliminary experimental work}
+	\chapter{The product}
 	
-	\section{Image management}
+	\section{Use case analysis}
+	\subsection{Image management}
 	
 	\begin{figure}[h!]
 	\begin{center}
@@ -612,7 +584,7 @@ can be considered as the secondary objective.\par
 	
 		
 	
-	\section{Image simulation}
+	\subsection{Image simulation}
 	
 	In order to assess the workflow listed in the chapter \ref{chapter:workflow}, a prototype implementation of the TEM image simulation recurring to Dr. Probe command-line software tools \citep{drprobe} was develop. A wrapper class was produced for each of Dr. Probe command-line tools:
 	
@@ -681,7 +653,7 @@ can be considered as the secondary objective.\par
 
 			
 	
-\section{T-focus map}
+\subsection{T-focus map}
 	
 
 Both defocus and sample thickness have a significant effect on the image intensity distribution. In order to estimate the best fit to the experimental image of both parameters, several step-wise variations should be computed. Therefore, given an initial estimate of both the defocus and thickness variation ranges, and the desired sample number in order to discretize each continuous range interval, a 2D variation map is created. An example T-focus map of a CeO2 crystal is presented in figure \ref{fig:t_focus_map} b). 
@@ -732,9 +704,9 @@ Both defocus and sample thickness have a significant effect on the image intensi
 
 
 	
-\section{Supercell estimation}
+\subsection{Supercell estimation}
 
-\subsection{Outline of the X-Y crystal shape}
+\subsubsection{Outline of the X-Y crystal shape}
 
 
 A typical way to compute edges in an image is to find local variations in intensity levels.
@@ -751,10 +723,79 @@ An area estimation of the X-Y crystal shape is also computed. Figure \ref{fig:ed
 		\end{center}
 	\end{figure}
 	
+	% CHAPTER - Contribution -------------------------
+		\section{Describing the problem}
+		
 	
+
+Following the state of the art presented in chapter \ref{chapter:im2model_workflow}, this dissertation aims to apply the concepts presented and proven in the previous sections regarding the construction of atomic structures based on high resolution TEM images interpretation, and simulation of optical parameters correlating with the experimentally acquired image.
+
+
+
+The Im2Model application should be structure trough the following steps:
+
+\begin{itemize}
+    \item \textbf{T-focus Map} -- Validation of the experimental setup parameters informed by the
+user and the preliminary crystallographic analysis by Im2Cr \citep{asilva2016} of TEM images  through image simulations of a small segment and its
+comparison with the experimental image, with the optical parameters varied stepwise in such a way that the image with the best fit to the experimental image will estimate the local sample thickness and defocus.\par This procedure is often referred as thickness-defocus maps in
+TEM simulation, and 
+will be carried out using Dr. Probe \citep{drprobe} %%pf verificar referencia
+		command-line software tools, composed of three tools, each related to one of the three Dr. Probe simulation steps. Wrappers for the target operating systems will be created.\par  The best fit to the experimental image will be carried out by recurring to the free Open Source Computer Vision Library (OpenCV), with two step image correlation algorithms and their respective suitable error metric, the first being a patch-based translation alignment with the similarity metric being the normalized correlation coefficient, and the second being an more sophisticated euclidean parametric motion with the same similarity metric as the first correlation step.
+		
+		
+\item  \textbf{Supercell estimation} --  A super cell model representing the whole structure will be built based on the crystallographic structure
+retrieved by Im2Cr \citep{asilva2016} and the estimated dimensions of a certain region of interest. At a first step an outline of the X-Y crystal shape will be produced based on the ROI. A rough estimation of the 3D nanostructure will be achieved after this workflow step.\par 
+
+
+
+
+\item \textbf{Supercell refinement} -- Iterative steps of image
+simulation, images comparison and model refinement will be carried out until a convergence threshold. Input parameters will also be refined and validated.\par  
+\end{itemize}
+
+
+
+During these steps, the atomic model and the TEM experimental parameters will be refined, leading to a
+complete description of the sample structure. We should have an atom by atom description of the nanostructure.\par 	
+
+		\section{Component architecture}
+
+			\subsection{Dependency analysis}
+
 
 %In this method if a pixel has a value above the high threshold them it belongs to an edge, if the value is bellow the low threshold it does not belong to an edge and if it is in between it belongs to an edge if it is connected to a pixel with value above the high threshold.:
 
+
+
+\chapter{Efficient implementation of Im2Model workflow}
+		    \section{Describing the final goal}
+		    Im2Model main objective is to provide a time-efficient and
+unbiased work-flow for the quantitative interpretation of high-resolution TEM images, by the use of
+efficient computation methods, enhancing the productivity on materials characterisation at the atomic
+scale.
+The resource utilisation efficiency for a given application workload
+can be considered as the secondary objective.\par 
+	
+	In order assess Im2Model efficiency on the prior metris  a theoretical performance model should be developed. Based on it we could impose theoretical performance roofs, explain experimental results and provide direction for the next software improvement step.
+	
+		    \subsection{Modelling the bootlecks}
+
+		    \section{Modelling the solution}
+		    \subsection{Designing the data model}
+		    \subsubsection{Storage and retrieval}
+		    \subsubsection{Distributed data}
+		    		    \subsection{Designing the application model}
+
+		      \subsubsection{Designing for testability}
+		      
+		      
+		    \section{The trouble with the modelled solution}
+		    \subsubsection{Unreliability}
+		    \subsubsection{Distributed data}
+		    
+		    
+
+\chapter{The test boundary}
 
 	% CHAPTER - Conclusion/Future Work --------------
 	\chapter{Conclusion}
@@ -769,6 +810,16 @@ paths can be taken, leaving the essential performance-related decisions to post 
 
 The Im2Model workflow has been fully characterised, and it is now time to complete the remaining steps and to "think towards efficiency and parallel".
 
+
+		    \section{The future of im2model}
+		    
+		     \subsection{Integrations}
+		     
+		      \subsection{Aiming for observality}
+		      
+		      \subsection{Trusting, but verifying}
+		      
+		      \subsection{Privacy, Tracking, and Compliance}
 
 	\bookmarksetup{startatroot} % Ends last part.
 	\addtocontents{toc}{\bigskip} % Making the table of contents look good.
