@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.13)  27 SEP 2018 21:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.13)  28 SEP 2018 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1289,27 +1289,28 @@ LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <9> not available
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 11
-1.
-
-(./dissertation.toc
-Package microtype Info: Character `013' is missing
-(microtype)             in font `OT1/pplj/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
- [4
+0.
 
 
-])
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write6
 \openout6 = `dissertation.toc'.
 
- [5]
+[4
+
+
+]
 Package tocbasic Info: character protrusion at lof deactivated on input line 11
-2.
- (./dissertation.lof)
+1.
+
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write7
 \openout7 = `dissertation.lof'.
 
- [6
+[5
 
 
 
@@ -1331,23 +1332,30 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-<img/Im2Model_goal.png, id=171, 1163.34625pt x 2691.05376pt>
+Package microtype Info: Character `013' is missing
+(microtype)             in font `OT1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+LaTeX Warning: Reference `fig:tem_2_atom_Ce02' on page 1 undefined on input lin
+e 146.
+
+<img/Im2Model_goal.png, id=47, 1163.34625pt x 2691.05376pt>
 File: img/Im2Model_goal.png Graphic file (type png)
 
 <use img/Im2Model_goal.png>
-Package pdftex.def Info: img/Im2Model_goal.png used on input line 152.
+Package pdftex.def Info: img/Im2Model_goal.png used on input line 151.
 (pdftex.def)             Requested size: 132.79747pt x 307.18573pt.
 
-./dissertation.tex:157: Undefined control sequence.
+./dissertation.tex:156: Undefined control sequence.
 <argument> ...ut and output of Im2Model.\splitter 
                                                   \newline a) 2D-TEM image o...
-l.157 ...uction of a CeO2 (cerium oxide) crystal.}
+l.156 ...uction of a CeO2 (cerium oxide) crystal.}
                                                   
 ? 
-./dissertation.tex:157: Undefined control sequence.
+./dissertation.tex:156: Undefined control sequence.
 <argument> ...ut and output of Im2Model.\splitter 
                                                   \newline a) 2D-TEM image o...
-l.157 ...uction of a CeO2 (cerium oxide) crystal.}
+l.156 ...uction of a CeO2 (cerium oxide) crystal.}
                                                   
 ? 
 
@@ -1357,7 +1365,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.181 
+l.180 
        [1
 
 
@@ -1367,139 +1375,157 @@ l.181
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.189 	T
+l.188 	T
         he software tool to be developed, named Im2Model, is therefore prese...
 [2 <./img/Im2Model_goal.png>]
-LaTeX Font Info:    Try loading font information for OMS+pplj on input line 200
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 199
 .
-LaTeX Font Info:    No file OMSpplj.fd. on input line 200.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 199.
 
 
 LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 200.
+(Font)              for symbol `textbullet' on input line 199.
 
-[3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+[3] [4]
 Chapter 2.
 
-Package natbib Warning: Citation `batenburg20093d' on page 4 undefined on input
- line 228.
+Package natbib Warning: Citation `batenburg20093d' on page 5 undefined on input
+ line 242.
 
 
-Package natbib Warning: Citation `jinschek20083' on page 4 undefined on input l
-ine 233.
+Package natbib Warning: Citation `jinschek20083' on page 5 undefined on input l
+ine 247.
 
 
-Package natbib Warning: Citation `jia2014determination' on page 4 undefined on 
-input line 237.
+Package natbib Warning: Citation `jia2014determination' on page 5 undefined on 
+input line 251.
 
 
-Overfull \hbox (7.49854pt too wide) in paragraph at lines 247--247
+Overfull \hbox (7.49854pt too wide) in paragraph at lines 261--261
 \OT1/pplj/m/n/10.95 A prece-dent step of high res-o-lu-tion TEM im-age sim-u-la
 -tion is the char-ac-ter-i-za-tion of nanocrys-
  []
 
-[4
+[5
 
 
 ]
 
-Package natbib Warning: Citation `asilva2016' on page 5 undefined on input line
- 250.
+Package natbib Warning: Citation `asilva2016' on page 6 undefined on input line
+ 264.
 
-<img/Im2Cr_workflow.png, id=193, 2014.52625pt x 4944.4725pt>
+
+LaTeX Warning: Reference `fig:im2cr_worflow' on page 6 undefined on input line 
+264.
+
+<img/Im2Cr_workflow.png, id=80, 2014.52625pt x 4944.4725pt>
 File: img/Im2Cr_workflow.png Graphic file (type png)
 
 <use img/Im2Cr_workflow.png>
-Package pdftex.def Info: img/Im2Cr_workflow.png used on input line 255.
+Package pdftex.def Info: img/Im2Cr_workflow.png used on input line 269.
 (pdftex.def)             Requested size: 221.32687pt x 543.21465pt.
- [5]
+ [6]
 
-LaTeX Warning: Text page 6 contains only floats.
+LaTeX Warning: Text page 7 contains only floats.
 
 
 Overfull \vbox (3.61436pt too high) has occurred while \output is active []
 
 
-[6 <./img/Im2Cr_workflow.png>]
+[7 <./img/Im2Cr_workflow.png>]
 
-Package natbib Warning: Citation `drprobe' on page 7 undefined on input line 28
-2.
-
-
-Package natbib Warning: Citation `koch2002determination' on page 7 undefined on
- input line 283.
+Package natbib Warning: Citation `drprobe' on page 8 undefined on input line 29
+6.
 
 
-Package natbib Warning: Citation `stadelmann2014java' on page 7 undefined on in
-put line 284.
+Package natbib Warning: Citation `koch2002determination' on page 8 undefined on
+ input line 297.
 
 
-Package natbib Warning: Citation `kilaas2014mactempasx' on page 7 undefined on 
-input line 285.
+Package natbib Warning: Citation `stadelmann2014java' on page 8 undefined on in
+put line 298.
 
 
-Package natbib Warning: Citation `stemcell' on page 7 undefined on input line 2
-86.
+Package natbib Warning: Citation `kilaas2014mactempasx' on page 8 undefined on 
+input line 299.
 
 
-Package natbib Warning: Citation `drprobe' on page 7 undefined on input line 28
+Package natbib Warning: Citation `stemcell' on page 8 undefined on input line 3
+00.
+
+
+Package natbib Warning: Citation `drprobe' on page 8 undefined on input line 30
+3.
+
+
+Package natbib Warning: Citation `lucas1981iterative' on page 8 undefined on in
+put line 309.
+
+
+Package natbib Warning: Citation `brown1992survey' on page 8 undefined on input
+ line 311.
+
+[8
+
+]
+
+Package natbib Warning: Citation `Ë†ome2004programming' on page 9 undefined on 
+input line 328.
+
+
+Package natbib Warning: Citation `asilva2016' on page 9 undefined on input line
+ 336.
+
+
+Package natbib Warning: Citation `drprobe' on page 9 undefined on input line 33
 9.
 
 
-Package natbib Warning: Citation `lucas1981iterative' on page 7 undefined on in
-put line 295.
+Package natbib Warning: Citation `asilva2016' on page 9 undefined on input line
+ 341.
 
-
-Package natbib Warning: Citation `brown1992survey' on page 7 undefined on input
- line 297.
-
-[7
-
-]
-
-Package natbib Warning: Citation `Ë†ome2004programming' on page 8 undefined on 
-input line 314.
-
-
-Package natbib Warning: Citation `asilva2016' on page 8 undefined on input line
- 322.
-
-
-Package natbib Warning: Citation `drprobe' on page 8 undefined on input line 32
-5.
-
-
-Package natbib Warning: Citation `asilva2016' on page 8 undefined on input line
- 327.
-
-
-Package natbib Warning: Citation `asilva2016' on page 8 undefined on input line
- 330.
-
-[8]
 
 Package natbib Warning: Citation `asilva2016' on page 9 undefined on input line
- 337.
+ 344.
 
-<img/workflow.png, id=218, 2055.68pt x 4646.35875pt>
+[9]
+
+LaTeX Warning: Reference `fig:tem_modeling_workflow' on page 10 undefined on in
+put line 351.
+
+
+Package natbib Warning: Citation `asilva2016' on page 10 undefined on input lin
+e 351.
+
+<img/workflow.png, id=108, 2055.68pt x 4646.35875pt>
 File: img/workflow.png Graphic file (type png)
  <use img/workflow.png>
-Package pdftex.def Info: img/workflow.png used on input line 343.
+Package pdftex.def Info: img/workflow.png used on input line 357.
 (pdftex.def)             Requested size: 221.32687pt x 500.25371pt.
 
-./dissertation.tex:349: Undefined control sequence.
-l.349 	\FloatBarrier
+./dissertation.tex:363: Undefined control sequence.
+l.363 	\FloatBarrier
                     
 ? 
-[9 <./img/workflow.png>] [10]
+[10 <./img/workflow.png>] [11]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--377
+Underfull \hbox (badness 10000) in paragraph at lines 385--391
 
  []
 
-[11
+[12
 
 
 ]
@@ -1507,112 +1533,161 @@ Missing character: There is no Ã in font pplr9o!
 Missing character: There is no — in font pplr9o!
 Missing character: There is no Ã in font pplr9o!
 Missing character: There is no — in font pplr9o!
- [12] [13] [14] [15] [16] [17]
+ [13] [14] [15] [16] [17] [18]
 Chapter 4.
-<img/T_CeO2_a.png, id=262, 2055.68pt x 2055.68pt>
+<img/T_CeO2_a.png, id=168, 2055.68pt x 2055.68pt>
 File: img/T_CeO2_a.png Graphic file (type png)
  <use img/T_CeO2_a.png>
-Package pdftex.def Info: img/T_CeO2_a.png used on input line 568.
+Package pdftex.def Info: img/T_CeO2_a.png used on input line 582.
 (pdftex.def)             Requested size: 221.32687pt x 221.32632pt.
 
-[18
+[19
 
 
  <./img/T_CeO2_a.png (PNG copy)>]
 
-Package natbib Warning: Citation `drprobe' on page 19 undefined on input line 5
-89.
+LaTeX Warning: Reference `fig:cerium_oxide_exp' on page 20 undefined on input l
+ine 597.
 
 
-Package natbib Warning: Citation `asilva2016' on page 19 undefined on input lin
-e 594.
+LaTeX Warning: Reference `chapter:workflow' on page 20 undefined on input line 
+603.
 
-<img/003_002_Ce02_b_t__6dot18_d__-10.png, id=270, 361.35pt x 361.35pt>
+
+Package natbib Warning: Citation `drprobe' on page 20 undefined on input line 6
+03.
+
+
+Package natbib Warning: Citation `asilva2016' on page 20 undefined on input lin
+e 608.
+
+
+LaTeX Warning: Reference `fig:sim_cerium_oxide' on page 20 undefined on input l
+ine 618.
+
+<img/003_002_Ce02_b_t__6dot18_d__-10.png, id=177, 361.35pt x 361.35pt>
 File: img/003_002_Ce02_b_t__6dot18_d__-10.png Graphic file (type png)
 
 <use img/003_002_Ce02_b_t__6dot18_d__-10.png>
 Package pdftex.def Info: img/003_002_Ce02_b_t__6dot18_d__-10.png used on input 
-line 610.
+line 624.
 (pdftex.def)             Requested size: 221.32687pt x 221.32744pt.
- [19]
-<img/sampling_rate_and_ignore_edges.png, id=275, 1197.47375pt x 548.0475pt>
+ [20]
+<img/sampling_rate_and_ignore_edges.png, id=183, 1197.47375pt x 548.0475pt>
 File: img/sampling_rate_and_ignore_edges.png Graphic file (type png)
 
 <use img/sampling_rate_and_ignore_edges.png>
 Package pdftex.def Info: img/sampling_rate_and_ignore_edges.png used on input l
-ine 636.
+ine 650.
 (pdftex.def)             Requested size: 331.99031pt x 151.93863pt.
- [20 <./img/003_002_Ce02_b_t__6dot18_d__-10.png (PNG copy)>]
-<img/t_focus_map.png, id=285, 1645.14626pt x 1265.72874pt>
+
+
+LaTeX Warning: Reference `fig:sim_image_crop_factor' on page 21 undefined on in
+put line 662.
+
+[21 <./img/003_002_Ce02_b_t__6dot18_d__-10.png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:sim_image_crop_factor' on page 22 undefined on in
+put line 663.
+
+
+LaTeX Warning: Reference `fig:sim_image_crop_factor' on page 22 undefined on in
+put line 663.
+
+
+LaTeX Warning: Reference `fig:sim_image_crop_factor' on page 22 undefined on in
+put line 663.
+
+
+LaTeX Warning: Reference `fig:t_focus_map' on page 22 undefined on input line 6
+73.
+
+<img/t_focus_map.png, id=190, 1645.14626pt x 1265.72874pt>
 File: img/t_focus_map.png Graphic file (type png)
 
 <use img/t_focus_map.png>
-Package pdftex.def Info: img/t_focus_map.png used on input line 668.
+Package pdftex.def Info: img/t_focus_map.png used on input line 682.
 (pdftex.def)             Requested size: 442.65375pt x 340.5539pt.
- [21 <./img/sampling_rate_and_ignore_edges.png>]
-
-Package natbib Warning: Citation `asilva2016' on page 22 undefined on input lin
-e 682.
-
-
-Package natbib Warning: Citation `asilva2016' on page 22 undefined on input lin
-e 682.
-
-[22 <./img/t_focus_map.png>]
+ [22 <./img/sampling_rate_and_ignore_edges.png>]
 
 Package natbib Warning: Citation `asilva2016' on page 23 undefined on input lin
-e 685.
+e 696.
 
-<img/2D_planar_transformations.png, id=299, 1458.44875pt x 1393.205pt>
+
+Package natbib Warning: Citation `asilva2016' on page 23 undefined on input lin
+e 696.
+
+
+LaTeX Warning: Reference `fig:2d_planar_transformations' on page 23 undefined o
+n input line 698.
+
+[23 <./img/t_focus_map.png>]
+
+Package natbib Warning: Citation `asilva2016' on page 24 undefined on input lin
+e 699.
+
+
+LaTeX Warning: Reference `fig:2d_planar_transformations' on page 24 undefined o
+n input line 700.
+
+<img/2D_planar_transformations.png, id=204, 1458.44875pt x 1393.205pt>
 File: img/2D_planar_transformations.png Graphic file (type png)
 
 <use img/2D_planar_transformations.png>
-Package pdftex.def Info: img/2D_planar_transformations.png used on input line 6
-90.
+Package pdftex.def Info: img/2D_planar_transformations.png used on input line 7
+04.
 (pdftex.def)             Requested size: 398.38567pt x 380.54965pt.
- [23 <./img/2D_planar_transformations.png>]
+ [24 <./img/2D_planar_transformations.png>]
 
-Package natbib Warning: Citation `canny1986computational' on page 24 undefined 
-on input line 713.
+Package natbib Warning: Citation `canny1986computational' on page 25 undefined 
+on input line 727.
 
-<img/edge_detection_exp.png, id=307, 4111.36pt x 2055.68pt>
+
+LaTeX Warning: Reference `fig:edge_detection_exp' on page 25 undefined on input
+ line 728.
+
+<img/edge_detection_exp.png, id=212, 4111.36pt x 2055.68pt>
 File: img/edge_detection_exp.png Graphic file (type png)
 
 <use img/edge_detection_exp.png>
-Package pdftex.def Info: img/edge_detection_exp.png used on input line 719.
+Package pdftex.def Info: img/edge_detection_exp.png used on input line 733.
 (pdftex.def)             Requested size: 331.99031pt x 165.99475pt.
 
 
-Package natbib Warning: Citation `asilva2016' on page 24 undefined on input lin
-e 739.
-
-[24 <./img/edge_detection_exp.png>]
-
-Package natbib Warning: Citation `drprobe' on page 25 undefined on input line 7
-42.
+LaTeX Warning: Reference `chapter:im2model_workflow' on page 25 undefined on in
+put line 745.
 
 
 Package natbib Warning: Citation `asilva2016' on page 25 undefined on input lin
-e 747.
+e 753.
 
-[25]
+[25 <./img/edge_detection_exp.png>]
+
+Package natbib Warning: Citation `drprobe' on page 26 undefined on input line 7
+56.
+
+
+Package natbib Warning: Citation `asilva2016' on page 26 undefined on input lin
+e 761.
+
+[26]
 Chapter 5.
-[26
-
-
-]
-Chapter 6.
 [27
 
 
 ]
-Chapter 7.
+Chapter 6.
 [28
 
 
 ]
-No file dissertation.bbl.
+Chapter 7.
 [29
+
+
+]
+No file dissertation.bbl.
+[30
 
 
 
@@ -1621,22 +1696,28 @@ No file dissertation.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 861.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 861.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 875.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 875.
 (./dissertation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 861.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 861.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 875.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 875.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 861.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 875.
  ) 
 Here is how much of TeX's memory you used:
- 31945 strings out of 493089
- 572743 string characters out of 6134842
- 964529 words of memory out of 5000000
- 34767 multiletter control sequences out of 15000+600000
+ 31940 strings out of 493089
+ 572659 string characters out of 6134842
+ 963529 words of memory out of 5000000
+ 34766 multiletter control sequences out of 15000+600000
  46610 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,14n,106p,1116b,781s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1650,10 +1731,10 @@ pe1/urw/helvetic/uhvr8ac.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/upl
 ri8a.pfb>
-Output written on dissertation.pdf (37 pages, 18140256 bytes).
+Output written on dissertation.pdf (37 pages, 18136200 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 472 compressed objects within 5 object streams
+ 464 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
  107 named destinations out of 1000 (max. 500000)
  13762 words of extra memory for PDF output out of 14400 (max. 10000000)
 
