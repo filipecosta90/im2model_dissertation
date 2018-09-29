@@ -4,7 +4,7 @@ This dissertation has 7 chapters, each with their summary presented bellow. The 
 chapters go through the fundamental ideas that apply to both scientific software and high
 performance software, whether running on a single machine or distributed across a cluster
 of machines.
-
+Markup :
 * Introduction: Presenting the motivation for this dissertation, and illustrating the desired
 sample input and output of Im2Model.
 
@@ -17,9 +17,10 @@ to the internals of scientific simulation.
 and software performance metrics and modelling.
 It examines what we actually mean by words like efficiency and scalability, and how
 we can try to achieve these goals.
+
 Later, the following 4 chapters will turn to the particular issues of the simulation of the
 described physical process in distributed systems.
-
+Markup :
 * The Product: Describing in detail the current solution legacy systems dependencies,
 and dividing different models and their components by their specific Ubiquitous Language
 and forming multiple Bounded Contexts.
