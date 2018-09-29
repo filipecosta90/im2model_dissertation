@@ -133,8 +133,8 @@ both execution time-efficiency and resource usage efficiency, of the final softw
 %	In crystalline materials, where atoms are situated in a repeating or periodic array over large atomic distances,
 %	it characterisation has been largely based on the surface analysis techniques and conventional characterisation methods developed for bulk materials.
 	\par 
-    Transmission electron microscopy (TEM) has been commonly used in characterization
-of nanostructured materials, elucidating the nanometer scale structures. 
+    Transmission electron microscopy (TEM) has been commonly used in characterisation
+of nano-structured materials, elucidating the nanometer scale structures. 
 However, it has a serious drawback due to the fact that electron scattering information in a TEM image originates from a three dimensional
 sample but is projected onto an two-dimensional detector.\par 
 The structure information along the electron beam direction is superimposed
@@ -142,7 +142,7 @@ at the image plane, therefore the information along the thickness direction of t
 
 %This holds for both instrumental modes , the coherent imaging mode (TEM) and the (STEM).\par
 
- On the scanning mode of transmission electron microscopy (STEM) methods have been developed, like the High-Angle Annular Dark Field (HAADF), that allow the 3D reconstruction of the nanostructured material based on a single image. For the coherent imaging mode (TEM) the satisfactory solution for 3D reconstruction still relies on several high-resolutions images, taken in different orientations, of the same sample.\par 
+ On the scanning mode of transmission electron microscopy (STEM) methods have been developed, like the High-Angle Annular Dark Field (HAADF), that allow the 3D reconstruction of the nano-structured material based on a single image. For the coherent imaging mode (TEM) the satisfactory solution for 3D reconstruction still relies on several high-resolutions images, taken in different orientations, of the same sample.\par 
  Figure \ref{fig:tem_2_atom_Ce02} illustrates the desired sample input and output of application to be developed.
 
 \begin{figure}[h!]
@@ -177,7 +177,7 @@ Only few examples of quantitative analysis of TEM images with atomic resolution 
 currently present in the literature %%% inserir referencia,
 reflecting the complexity and the time-consuming aspect of the
 outlined analysis chain.\par 
-Moreover, more accurate representations and higher resolution models are directly associated with the usage of simulation for the physical processes. HPC is now an integrant component of the nanostructure materials studies, with simulations presenting ever increasing scales.\pr
+Moreover, more accurate representations and higher resolution models are directly associated with the usage of simulation for the physical processes. HPC is now an integrant component of the nanostructure materials studies, with simulations presenting ever increasing scales.\par
 
 
 
@@ -188,39 +188,51 @@ Moreover, more accurate representations and higher resolution models are directl
 	The possibility of creating an atomic model from a single high-resolution TEM image would increase the information presented to electron microscopy users and would support the automation of tasks and information retrieval(currently retrieved manually).\par 
 	
 	The software tool to be developed, named Im2Model, is therefore presented as a bridge between data visualisation of nano-structured materials crystallographic information and quantitative interpretation in a real-time basis of experimental attained high-resolution TEM images.\par 
+	
+	
+	
 		\section{Dissertation Structure}
 		
+This dissertation has 7 chapters, each with their summary presented bellow.
+The first 3 chapters go through the fundamental ideas that apply to both scientific software and high performance software, whether running on a single machine or distributed across a cluster of machines.
 
-This dissertation has 7 chapters, each with their summary presented bellow:
 
 \begin{itemize}
     \item \textbf{Introduction}: Presenting the motivation for this dissertation, and illustrating the desired sample input and output of Im2Model.
     
+
+    
      \item \textbf{Atomic Models for TEM Image Simulation and Matching}:
-    Presenting the state-of-the-art regarding the  crystallographic indexing of nano-structured materials,  methodologies for TEM image simulation, and image correlation algorithms.
+    Presenting the state-of-the-art regarding the  crystallographic indexing of nano-structured materials,  methodologies for TEM image simulation, and image correlation algorithms, presenting us to the internals of scientific simulation.
         
     \item \textbf{Computational Efficiency}:  Presenting the state-of-the-art art in terms of hardware and
 software performance metrics and modelling.
 
+    It examines what we actually mean by words like efficiency and scalability, and how we can try to achieve these goals.
+    
+    \end{itemize}
+    
+    Later, the following 4 chapters will turn to the particular issues of the simulation of the described physical process in distributed data systems.
+\begin{itemize}
+
     \item \textbf{The Product}:
     Describing in detail the current solution legacy systems dependencies, and dividing different models and their components by their specific Ubiquitous Language and forming multiple Bounded Contexts.\\
     
+
+    
+    \item \textbf{Efficient implementations of Im2model workflow}:
     
     
-     
-     
-    
-    \item \textbf{Efficient implementations of im2model workflow}:
-    
-    
-    The previously described architecture, had functionality built on the same machine. These functional groups are tightly coupled, symbiotic systems. They depend on local, shared resources like disk, network interface, or inter-process communications. \\
+    The previously described architecture, had functionality built on the same machine. These functional groups are tightly coupled, symbiotic systems. They depend on local, shared resources like disk, network interface, or inter-process communications. \par
 
     This chapter focus on modelling and implementing the system to achieve the level of reliability, agility, and scale expected, built out of many different components running in different processes and communicating over distinct means spread across multiple machines, 
-    with elastic/ on-demand resource allocation. We will also be focusing attention on the resources that are exchanged between Bounded Contexts.\\
-    Considering we are modelling software to runs on several machines, connected by several distinct networks, faults and failures will be also taken in account in the design and implementation stages. We are no longer operating in an ideal system model, but in nondeterministic one with the possibility of partial failures. Therefore, we will discuss a wide range of problems that can occur in the modelled distributed system.    
+    with elastic \/ on-demand resource allocation. We will also be focusing attention on the resources that are exchanged between Bounded Contexts.\par
+    Considering we are modelling software to runs on several machines, connected by several distinct networks, faults and failures will be also taken in account in the design and implementation stages. We are no longer operating in an ideal system model, but in nondeterministic one with the possibility of partial failures. Therefore, we will discuss a wide range of problems that can occur in the modelled distributed system.    \par
 
     
-        \item \textbf{The test boundary}:  Presenting an overview of the  results obtained by
+        \item \textbf{The test boundary}:  
+        
+        This chapter dives into the different types of tests we have run to effectively and efficiently test the system functionalities when they spanned into a distributed system, while also breaking down the problems associated with testing finer-grained systems. It presents an overview of the  results obtained by
 the preliminary experimental work developed.
 
             \item \textbf{Conclusion}: Presenting an overview of  Im2Model major challenges until the current developing stage and future steps.
@@ -237,8 +249,8 @@ the preliminary experimental work developed.
 
 	\section{Related work}
 	
-	The conventional electron tomography method to determine the three-dimensional structure of the nanostructured material relies on a number of images taken along different viewing angles \citep{batenburg20093d}. 
-The acquisition of several high resolution images may add inaccuracy to the consistent reconstruction of the model, since the physical properties of the nanostructured material 
+	The conventional electron tomography method to determine the three-dimensional structure of the nano-structured material relies on a number of images taken along different viewing angles \citep{batenburg20093d}. 
+The acquisition of several high resolution images may add inaccuracy to the consistent reconstruction of the model, since the physical properties of the nano-structured material 
 may be modified due to the high-energy electron beam required by TEM tomography. These small modifications on the acquired images may lead to different nanostructure reconstructions.\par 
 
 The 3D shape of several nanostructured materials has been reconstructed  with a significant reduction of the required slice images, by using a discrete tomography technique in
