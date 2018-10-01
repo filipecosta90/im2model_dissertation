@@ -45,22 +45,29 @@
 \contentsline {subsection}{\numberline {4.3.1}Dependency analysis}{26}{subsection.4.3.1}
 \contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Efficient implementation of Im2Model workflow}}{27}{chapter.5}
 \contentsline {section}{\numberline {5.1}Describing the final goal}{27}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Modelling the bootlecks}{27}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Modelling the solution}{27}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Designing the data model}{27}{subsection.5.2.1}
-\contentsline {subsubsection}{Storage and retrieval}{27}{subsection.5.2.1}
-\contentsline {subsubsection}{Distributed data}{27}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Designing the application model}{27}{subsection.5.2.2}
-\contentsline {subsubsection}{Designing for testability}{27}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}The trouble with the modelled solution}{27}{section.5.3}
-\contentsline {subsubsection}{Unreliability}{27}{section.5.3}
-\contentsline {subsubsection}{Distributed data}{27}{section.5.3}
-\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {The test boundary}}{28}{chapter.6}
-\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Conclusion}}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}The future of im2model}{29}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Integrations}{29}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Aiming for observality}{29}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Trusting, but verifying}{29}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}Privacy, Tracking, and Compliance}{29}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {5.1.1}Cross functional requirements}{27}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Modelling the bootlecks}{27}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Modelling the solution}{28}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Designing the data model}{28}{subsection.5.2.1}
+\contentsline {subsubsection}{Storage and retrieval}{28}{subsection.5.2.1}
+\contentsline {subsubsection}{Distributed data}{28}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Designing the application model}{28}{subsection.5.2.2}
+\contentsline {subsubsection}{Designing for testability}{28}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}The trouble with the modelled solution}{28}{section.5.3}
+\contentsline {subsubsection}{Unreliability}{28}{section.5.3}
+\contentsline {subsubsection}{Designing for resiliency and self-healing}{28}{section.5.3}
+\contentsline {subsubsection}{Distributed data}{28}{section.5.3}
+\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {The test boundary}}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Service tests}{29}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Implementing Service tests}{29}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Performance Tests}{29}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}}{30}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}}{30}{subsection.6.2.2}
+\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Conclusion}}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}The future of im2model}{31}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Integrations}{31}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Aiming for observality}{31}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Trusting, but verifying}{31}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Privacy, Tracking, and Compliance}{31}{subsection.7.1.4}
 \vspace \bigskipamount 
 \vspace \bigskipamount 

@@ -793,6 +793,7 @@ complete description of the sample structure. We should have an atom by atom des
 
 \chapter{Efficient implementation of Im2Model workflow}
 		    \section{Describing the final goal}
+		    
 		    Im2Model main objective is to provide a time-efficient and
 unbiased work-flow for the quantitative interpretation of high-resolution TEM images, by the use of
 efficient computation methods, enhancing the productivity on materials characterisation at the atomic
@@ -802,7 +803,29 @@ can be considered as the secondary objective.\par
 	
 	In order assess Im2Model efficiency on the prior metris  a theoretical performance model should be developed. Based on it we could impose theoretical performance roofs, explain experimental results and provide direction for the next software improvement step.
 	
+	
+	
+	\subsection{Cross functional requirements}
+	
+	Response time / latency
+	Availability
+	Durability of data
+	
 		    \subsection{Modelling the bootlecks}
+		    
+		    
+		    Track inbound response time at a bare minimum. 
+		    
+		    Once you?ve done that, follow with error rates and then start working on application-level metrics. 
+		    
+		     Track the health of all downstream responses, at a bare minimum including the response time of downstream calls, and at best tracking error rates. 
+		     
+		     Standardize on how and where metrics are collected. 
+		     
+		     
+		     Monitor the underlying operating system so you can track down rogue processes and do capacity planning.
+
+
 
 		    \section{Modelling the solution}
 		    \subsection{Designing the data model}
@@ -815,11 +838,42 @@ can be considered as the secondary objective.\par
 		      
 		    \section{The trouble with the modelled solution}
 		    \subsubsection{Unreliability}
+		    
+		    \subsubsection{Designing for resiliency and self-healing}
+		    
+		   By rebuilding an application as a network of microservices, each single point of failure is naturally easier to make resilient against machine or network failure by adding redundancy. Each service can have multiple instances running, and calls to them can be distributed between running versions. A key motivation for switching to microservices in the first place is to provide such runtime resilience.
+		    
 		    \subsubsection{Distributed data}
 		    
 		    
 
 \chapter{The test boundary}
+
+
+\section{Service tests}
+Service tests are designed to bypass the user interface and test services directly. In the the previous architecture, we might just be testing a collection of classes that provide a service to the UI. For a system comprising a number of services, a service test would test an individual service\?s capabilities.\par The reason we want to test a single service by itself is to improve the isolation of the test to make finding and fixing problems faster, while also identifying the first bottlenecks of each service. To achieve this isolation, we need to stub out all external collaborators so only the service itself is in scope, as Figure XXXXXXXX shows.
+
+%% inserir figura que ilustre um serviço isolado
+
+\subsection{Implementing Service tests}
+
+
+Our service tests want to test a slice of functionality across the whole service, but to isolate ourselves from other services we need to find some way to  stub out any downstream services. 
+
+
+When using a mock, I actually go further and make sure the call was made. If the expected call is not made, the test fails. Implementing this approach requires more smarts in the fake collaborators that we create, and if overused can cause tests to become brittle. As noted, however, a stub doesn?t care if it is called 0, 1, or many times. Sometimes, though, mocks can be very useful to ensure that the expected side effects happen. For example, I might want to check that when I create a customer, a new points balance is set up for that customer. The balance between stubbing and mocking calls is a delicate one, and is just as
+
+\section{Performance Tests}
+
+When decomposing systems into smaller bounded contests, running on different components in different processes and spread across multiple machines we increase the number of calls that will be made across network boundaries. Where previously an operation might have involved one database call, it may now involve three or four calls across network boundaries to other services, with a matching number of database calls. All of this can decrease the speed at which our systems operate. \par 
+Tracking down sources of latency is especially important. When you have a call chain of multiple synchronous calls, if any part of the chain starts acting slowly, everything is affected, potentially leading to a significant impact. This makes having some way to performance test your applications even more important than it might be with a more monolithic system. \par 
+To generate worthwhile results, we've run extensive scenarios with gradually increasing numbers of simulated payloads. This allows to see how latency of calls varies with increasing load.
+
+\subsection{}
+
+
+
+\subsection{}
 
 	% CHAPTER - Conclusion/Future Work --------------
 	\chapter{Conclusion}
