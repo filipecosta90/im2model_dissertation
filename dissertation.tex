@@ -227,7 +227,7 @@ software performance metrics and modelling.
 
     This chapter focus on modelling and implementing the system to achieve the level of reliability, agility, and scale expected, built out of many different components running in different processes and communicating over distinct means spread across multiple machines, 
     with elastic \/ on-demand resource allocation. We will also be focusing attention on the resources that are exchanged between Bounded Contexts.\par
-    Considering we are modelling software to runs on several machines, connected by several distinct networks, faults and failures will be also taken in account in the design and implementation stages. We are no longer operating in an ideal system model, but in nondeterministic one with the possibility of partial failures. Therefore, we will discuss a wide range of problems that can occur in the modelled distributed system.    \par
+    Considering we are modelling software to runs on several machines, connected by several distinct networks, faults and failures will be also taken in account in the design and implementation stages. We are no longer operating in an ideal system model, but in an non-deterministic one with the possibility of partial failures. Therefore, we will discuss a wide range of problems that can occur in the modelled distributed system.    \par
 
     
         \item \textbf{The test boundary}:  
@@ -268,7 +268,7 @@ on this basis provides a best fit to the experimental image.
 	
 	\subsection{Nanostructured materials crystallographic indexing from high resolution (S)TEM images}
 	
-	A precedent step of high resolution TEM image simulation is the characterization of nanocrystalline materials at higher resolutions as obtainable in a transmission electronmicroscope (TEM). Nanostructured materials crystallographic indexing refers to labeling the diffraction rings and spot with appropriate Miller indices (hkl).\par 
+	A precedent step of high resolution TEM image simulation is the characterization of nanocrystalline materials at higher resolutions as obtainable in a transmission electron-microscope (TEM). Nanostructured materials crystallographic indexing refers to labeling the diffraction rings and spot with appropriate Miller indices (hkl).\par 
 	 Crystallographic indexing of  using high resolution (S)TEM images
 	 can be carried out manually by the users by application of the reciprocal lattice and kinematical theory of electron diffraction, resulting in a reduced TEM characterization yield and significant user bias.\par 
 	 There is an alternative (S)TEM technique that works on the basis of a new software tool to aid the crystallographic indexing of nanostructured materials using high resolution (S)TEM images. Im2Cr \citep{asilva2016} implementation aims for a minimal user interaction, supporting the detection of zone-axis oriented particles, and including an efficient peak detection process applied to the images Fourier Transform (FT). With basis on the FT peaks distances and relative angles, crystallographic indexation is carried out autonomously via comparison with a list of candidate structures named by the user, and a ranking of the best matching combinations of crystallographic structures and viewing zone axes are generated. This technique provides efficient and reliable data analysis reducing the complexity and time needed to to produce a crystallographic analysis. Figure \ref{fig:im2cr_worflow} illustrates the Im2Cr workflow. 
@@ -290,7 +290,7 @@ on this basis provides a best fit to the experimental image.
 	
 		\subsection{TEM image simulation}
 		
-		Transmission electron microscopy image simulation is essential in TEM characterisation of nanostructured materials.
+		Transmission electron microscopy image simulation is essential in TEM characterization of nanostructured materials.
 		Here, the nanostructure is sectioned into thin layers along the direction of the electron beam. Each layers is prepensed to represent a narrow height interval of the nanostructure, which allows the weak phase object approximation for the calculations at each layer. The multislice algorithm becomes exact only in the limit of very thin layers.\par 
 		
 		The scattered wave is then propagated in vacuum to the next layer and the process is repeated until the desired sample thickness is reached.
@@ -316,14 +316,14 @@ on this basis provides a best fit to the experimental image.
 		
 	\subsection{Image correlation}
 	
-	Algorithms for aligning images are among the oldest and most widely used in computer vision.	One of the most commonly used algorithm is to shift or warp the images relative to each other and to look at how much the pixels agree, directly minimising pixel-to-pixel dissimilarities, normally refered as  the patch-based translational alignment \citep{lucas1981iterative}. 
+	Algorithms for aligning images are among the oldest and most widely used in computer vision.	One of the most commonly used algorithm is to shift or warp the images relative to each other and to look at how much the pixels agree, directly minimizing pixel-to-pixel dissimilarities, normally referred as  the patch-based translational alignment \citep{lucas1981iterative}. 
 	A variety of such parametric motion models are possible, from simple 2D transforms, to most complex 3D perspective transformations.\par 
 	To use the precedent method, a suitable error metric must first be chosen to compare the images, which normally is achieved recurring to one of the following image similarity metrics\citep{brown1992survey}:
 	
 	\begin{itemize}
 	    \item \textbf{Squared difference} -- Match the squared difference of the patch and the input image.
 			Perfect match will be 0, and bad matches will be large.
-	     \item \textbf{Cross Correlation} -- Multiplicatively match the patch against the input image.
+	     \item \textbf{Cross Correlation} -- Multiplicative match the patch against the input image.
 			Perfect match will be large, and bad matches will be small or 0.
 			
 	     \item \textbf{Correlation Coefficient} -- Match the patch relative to its mean, against the input image relative to its mean.
@@ -332,10 +332,10 @@ on this basis provides a best fit to the experimental image.
 				
 
 We should obtain more accurate matches, at the cost of more computation effort, as we move from simple measurement methods like the squared difference, to more sophisticated ones like correlation coefficient.\par
-The normalised methods of the precedent error metrics are extremely useful since they help reducing the effects of lightning differences between the images being correlated.\par 
+The normalized methods of the precedent error metrics are extremely useful since they help reducing the effects of lightning differences between the images being correlated.\par 
 
 
-Computer vision operations will be carried out by recurring to the free Open Source Computer Vision Library (OpenCV) that optionally can be highly optimised by loading the commercial Intel Integrated Performance Primitives (IPP)\citep{ˆome2004programming}, or developing GPU-accelerated image processing that will be integrated with native OpenCV C++11 methods.
+Computer vision operations will be carried out by recurring to the free Open Source Computer Vision Library (OpenCV) that optionally can be highly optimized by loading the commercial Intel Integrated Performance Primitives (IPP)\citep{ˆome2004programming}, or developing GPU-accelerated image processing that will be integrated with native OpenCV C++11 methods.
 
 
 
@@ -393,9 +393,9 @@ MIC devices and NVidia GPUs). If such levels of efficiency are reached, it could
 
 
 A performance goal provides direction for our performance analysis work and will 
-help the optimisation pipeline. Our main objective is to provide a time-efficient and
+help the optimization pipeline. Our main objective is to provide a time-efficient and
 unbiased work-flow for the quantitative interpretation of high-resolution TEM images, by the use of
-efficient computation methods, enhancing the productivity on materials characterisation at the atomic
+efficient computation methods, enhancing the productivity on materials characterization at the atomic
 scale. Considering that the work-flow presents such a demanding and wide-ranging requirements, a single approach can no longer meet all of its computing, data processing and storage needs. 
 Instead, the work is broken down into smaller tasks that can be performed efficiently, and those different tools are stitched together using an distributed system design approach.\\
 
@@ -408,7 +408,7 @@ The composite distributed system must provide certain guarantees:
 		\end{enumerate}
 
 
-The resource utilisation efficiency for a given application workload
+The resource utilization efficiency for a given application workload
 can be considered as the secondary objective.\par 
 
 
