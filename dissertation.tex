@@ -785,6 +785,8 @@ complete description of the sample structure. We should have an atom by atom des
 		\section{Component architecture}
 
 			\subsection{Dependency analysis}
+			
+			\subsection{}
 
 
 %In this method if a pixel has a value above the high threshold them it belongs to an edge, if the value is bellow the low threshold it does not belong to an edge and if it is in between it belongs to an edge if it is connected to a pixel with value above the high threshold.:
@@ -824,14 +826,52 @@ can be considered as the secondary objective.\par
 		     
 		     
 		     Monitor the underlying operating system so you can track down rogue processes and do capacity planning.
+		     
+		     
+		     
+		     
+		  
 
 
 
 		    \section{Modelling the solution}
+		    \subsection{Collaboration between XXXX}
+		    
+		    
+		       Service-based architectures, like microservices or SOA, are commonly built with
+synchronous request-response protocols. This approach is very natural. It is,
+after all, the way we write programs: we make calls to other code modules, await
+a response, and continue. It also fits closely with a lot of use cases we see each
+day: front-facing websites where users hit buttons and expect things to happen,
+then return.
+But when we step into a world of many independent services, things start to
+change. As the number of services grows gradually, the web of synchronous
+interactions grows with them. Previously benign availability issues start to trigger
+far more widespread outages. Our ops engineers often end up as reluctant detec?
+tives, playing out distributed murder mysteries as they frantically run from ser?
+vice to service, piecing together snippets of secondhand information. (Who said
+what, to whom, and when?)
+This is a well-known problem, and there are a number of solutions. One is to
+ensure each individual service has a significantly higher SLA than your system as
+a whole. Google provides a protocol for doing this. An alternative is to simply
+break down the synchronous ties that bind services together using (a) asynchro?
+nicity and (b) a message broker as an intermediary.
+
+
+
 		    \subsection{Designing the data model}
 		    \subsubsection{Storage and retrieval}
 		    \subsubsection{Distributed data}
 		    		    \subsection{Designing the application model}
+				    
+  \subsection{Designing the application model}
+  
+  
+  JSON Schema describes JSON data. It?s like a database schema for JSON and can be used to validate a JSON instance before it?s sent to an API. 
+  The JSON Schema .json files are usually made available somewhere in a HTTP Link header with a rel of ?describedby?.
+Link: <http://example.com/schemas/user.json#>; rel=?describedby?. This might look a bit off to those not used to Link headers, but this is how a lot of links are handled these days. The one difficulty here is parsing the value, which can be done with some extremely awful regex, or with a RFC5988 compliant link parser???like parse-link-header for JavaScript.
+
+Once a API client has the schema URL they can download the file. 
 
 		      \subsubsection{Designing for testability}
 		      
